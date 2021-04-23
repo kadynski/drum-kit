@@ -12,7 +12,7 @@ const snare = new Audio ("sounds/snare.mp3");
 
 // detecting buttons
 
-for (const i =0; i<document.querySelectorAll(".drum").length; i++) {
+for (let i =0; i<document.querySelectorAll(".drum").length; i++) {
 
 document.querySelectorAll(".drum")[i].addEventListener("click", function () {
 
