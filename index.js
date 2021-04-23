@@ -18,7 +18,7 @@ document.querySelectorAll(".drum")[i].addEventListener("click", function () {
 
 let = buttonInnerHTML = this.innerHTML;
 makeSound(buttonInnerHTML);
-});
+};
 
 //detecting keybord press
 
