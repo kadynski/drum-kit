@@ -12,18 +12,23 @@ const snare = new Audio ("sounds/snare.mp3");
 
 // detecting buttons
 
-for (let i =0; i<document.querySelectorAll(".drum").length; i++) {
+for (const i =0; i<document.querySelectorAll(".drum").length; i++) {
 
 document.querySelectorAll(".drum")[i].addEventListener("click", function () {
 
-let = buttonInnerHTML = this.innerHTML;
-makeSound(buttonInnerHTML);
+makeSound(this.innerHTML);
+
+buttonAnimation(this.innerHTML);
+})
 };
 
 //detecting keybord press
 
 document.addEventListener("keydown", function(event) {
+
   makeSound(event.key);
+
+  buttonAnimation(event.key);
 });
 
 
@@ -63,3 +68,16 @@ switch (key) {
 
   default:
 }};
+
+
+//animation function
+
+function buttonAnimation (currentKey) {
+
+const activeButton = document.querySelector("." +currentKey);
+activeButton.classList.add("pressed");
+
+setTimeout (function() {
+activeButton.classList.remove("pressed");
+}, 100);
+};
