@@ -82,7 +82,8 @@ background-image: url("images/snare.png");
 
 @media  (max-width: 479px) {
 .drum {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
+  font-size: 52px;
 }
 }
